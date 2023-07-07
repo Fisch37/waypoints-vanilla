@@ -15,7 +15,7 @@ def single_page(i: int,*,page_template: str) -> str:
     return Template(page_template).substitute(i=i,j=i+1)
 
 def nbt_from_pages(pages: Iterable[str]):
-    return '{author:"",title:"",pages:['+",".join(pages)+'],resolved:0b}'
+    return '{author:"",title:"",page_count:'+str(len(pages))+',pages:['+",".join(pages)+'],resolved:0b}'
 
 def _int_input(
         prompt: str = "", 

@@ -4,4 +4,4 @@
  #
  # Created by Fisch37.
 ##
-data modify entity @s Item.tag.pages set from storage fisch37:waypoints/books all_waypoints
+data modify entity @s Item.tag merge from storage fisch37:waypoints/books all_waypoints
