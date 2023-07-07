@@ -21,5 +21,7 @@ execute if dimension minecraft:the_end run data merge storage fisch37:waypoints 
 data modify storage fisch37:waypoints waypoints append from storage fisch37:waypoints current_waypoint
 # Remove temporary data
 data remove storage fisch37:waypoints current_waypoint
+# Update waypoint count
+scoreboard players add wps_count f37_waypoints_RAM 1
 
 function fisch37:waypoints/reset_waypoint_book
