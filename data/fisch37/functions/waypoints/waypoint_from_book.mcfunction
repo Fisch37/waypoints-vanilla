@@ -6,7 +6,7 @@
 ##
 # Setting up a temporary storage location to create the waypoint into
 # Redoing this every time to ensure everything is set correctly
-data merge storage fisch37:waypoints {current_waypoint:{name:"",author:"",Pos:[0d,0d,0d],cost:0,dimension:{index:0,name:"Overworld"}}}
+data merge storage fisch37:waypoints {current_waypoint:{name:"",author:"",Pos:[0,0,0],cost:0,dimension:{index:0,name:"Overworld"}}}
 # Storing data
 data modify storage fisch37:waypoints current_waypoint.name set string entity @s SelectedItem.tag.title
 data modify storage fisch37:waypoints current_waypoint.author set string entity @s SelectedItem.tag.author
