@@ -11,9 +11,9 @@ data merge storage fisch37:waypoints {current_waypoint:{name:"",author:"",Pos:[0
 data modify storage fisch37:waypoints current_waypoint.name set string entity @s SelectedItem.tag.title
 data modify storage fisch37:waypoints current_waypoint.author set string entity @s SelectedItem.tag.author
 
-data modify storage fisch37:waypoints current_waypoint.Pos[0] set from entity @s Pos[0]
-data modify storage fisch37:waypoints current_waypoint.Pos[1] set from entity @s Pos[1]
-data modify storage fisch37:waypoints current_waypoint.Pos[2] set from entity @s Pos[2]
+execute store result storage fisch37:waypoints current_waypoint.Pos[0] int 1 run data get entity @s Pos[0] 1
+execute store result storage fisch37:waypoints current_waypoint.Pos[1] int 1 run data get entity @s Pos[1] 1
+execute store result storage fisch37:waypoints current_waypoint.Pos[2] int 1 run data get entity @s Pos[2] 1
 # Store dimension
 execute if dimension minecraft:the_nether run data merge storage fisch37:waypoints {dimension:{index:-1, name:"The Nether"}}
 execute if dimension minecraft:the_end run data merge storage fisch37:waypoints {dimension:{index:1, name:"The End"}}
