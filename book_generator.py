@@ -14,8 +14,8 @@ page_types: list[tuple[str,str]] = [
 def single_page(i: int,*,page_template: str) -> str:
     return Template(page_template).substitute(i=i,j=i+1)
 
-def nbt_from_pages(pages: Iterable[str]):
-    return '{author:"",title:"",page_count:'+str(len(pages))+',pages:['+",".join(pages)+'],resolved:0b}'
+def nbt_from_pages(pages: Iterable[str], page_count: int):
+    return '{author:"",title:"",page_count:'+str(page_count)+',pages:['+",".join(pages)+'],resolved:0b}'
 
 def _int_input(
         prompt: str = "", 
@@ -46,7 +46,13 @@ def main():
             "The passed value is not in the possible types"
         )]
     
-    s = nbt_from_pages(single_page(i,page_template=template) for i in range(page_count))
+    s = nbt_from_pages(
+        (
+            single_page(i,page_template=template) 
+            for i in range(page_count)
+        ),
+        page_count
+    )
     with open(f"raw_snbt_{template_name}.txt","w") as file:
         file.write(s)
 
