@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values": [
-        "fisch37:waypoints/reset"
+        "fisch37:waypoints/reset",
+        "fisch37:waypoints/book_modifiers/reset"
     ]
 }
