@@ -6,4 +6,5 @@
 ##
 data modify entity @s Item.tag merge from storage fisch37:waypoints/books all_waypoints
 
+scoreboard players operation target_page_count f37_waypoints_RAM = wps_count f37_waypoints_RAM
 function fisch37:waypoints/book_modifiers/purge_pages
