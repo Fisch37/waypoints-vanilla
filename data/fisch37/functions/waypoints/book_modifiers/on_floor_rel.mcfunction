@@ -6,6 +6,5 @@
 ##
 data modify entity @s Item.tag merge from storage fisch37:waypoints/books rel_waypoints
 
-# TODO: Somehow implement things to actually have a decent page count.
-scoreboard players set target_page_count f37_waypoints_RAM 1
+execute store result score target_page_count f37_waypoints_RAM run data get entity @s Item.tag.wps_count 1
 function fisch37:waypoints/book_modifiers/purge_pages
