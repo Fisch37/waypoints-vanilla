@@ -7,6 +7,7 @@
 
 scoreboard players operation target_waypoint f37_waypoints_RAM = @s goto_waypoint
 scoreboard players remove target_waypoint f37_waypoints_RAM 1
+data modify storage fisch37:waypoints iter_waypoints set from storage fisch37:waypoints waypoints
 function fisch37:waypoints/get_waypoint
 execute store result score has_sufficient_levels f37_waypoints_RAM run function fisch37:waypoints/check_levels
 
