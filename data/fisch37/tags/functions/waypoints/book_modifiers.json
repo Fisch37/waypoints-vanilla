@@ -1,0 +1,7 @@
+{
+    "replace": true,
+    "values": [
+        "fisch37:waypoints/book_modifiers/store_all_wps_nbt",
+        "fisch37:waypoints/book_modifiers/store_rel_wps_nbt"
+    ]
+}
