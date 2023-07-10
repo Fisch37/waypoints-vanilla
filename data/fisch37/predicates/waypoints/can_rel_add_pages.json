@@ -1,0 +1,20 @@
+{
+    "condition": "all_of",
+    "terms": [
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "type": "minecraft:item",
+                "nbt": "{Item:{tag:{RelativeWaypoints:1b}}}"
+            }
+        },
+        {
+            "condition": "location_check",
+            "offsetY": -1,
+            "predicate": {
+                "block": {"blocks": ["minecraft:cartography_table"]}
+            }
+        }
+    ]
+}
