@@ -13,3 +13,5 @@ execute store result entity @s Item.tag.wps_count int 1 run scoreboard players g
 
 function fisch37:waypoints/book_modifiers/on_floor_rel
 kill @e[limit=1,sort=nearest,type=item,nbt={Item:{tag:{IsWaypoint:1b}}},distance=..1]
+execute at @s run playsound minecraft:block.enchantment_table.use player @a
+execute at @s run particle minecraft:enchant ~ ~1.5 ~ 0 0 0 3 100
