@@ -4,7 +4,7 @@
  # 
  # Created by Fisch37.
 ##
-function fisch37:waypoints/_iter_reduce_levels
+execute unless entity @s[gamemode=creative] run function fisch37:waypoints/_iter_reduce_levels
 execute store result score x f37_tp_pos run data get storage fisch37:waypoints target_waypoint.Pos[0]
 execute store result score y f37_tp_pos run data get storage fisch37:waypoints target_waypoint.Pos[1]
 execute store result score z f37_tp_pos run data get storage fisch37:waypoints target_waypoint.Pos[2]

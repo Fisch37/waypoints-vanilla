@@ -10,6 +10,8 @@ scoreboard players remove target_waypoint f37_waypoints_RAM 1
 function fisch37:waypoints/get_waypoint
 execute store result score player_levels f37_waypoints_RAM run xp query @s levels
 execute store result score wps_cost f37_waypoints_RAM run data get storage fisch37:waypoints target_waypoint.cost
+# Creative mode teleport level override
+execute if entity @s[gamemode=creative] run scoreboard players operation player_levels f37_waypoints_RAM = wps_cost f37_waypoints_RAM
 # On Error
 execute if score player_levels f37_waypoints_RAM < wps_cost f37_waypoints_RAM run tellraw @s [{"text":"[Waypoints] ","color":"aqua","bold":true},{"text":"You do not have enough levels!","color":"red","bold":false}]
 execute if score player_levels f37_waypoints_RAM < wps_cost f37_waypoints_RAM at @s run playsound minecraft:entity.ender_eye.death player @s
