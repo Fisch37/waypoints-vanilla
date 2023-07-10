@@ -1,0 +1,24 @@
+{
+    "function": "copy_nbt",
+    "source": {
+        "type": "storage",
+        "source": "fisch37:waypoints"
+    },
+    "ops": [
+        {
+            "op": "replace",
+            "target": "author",
+            "source": "current_waypoint.author"
+        },
+        {
+            "op": "replace",
+            "target": "title",
+            "source": "current_waypoint.name"
+        },
+        {
+            "op": "merge",
+            "target": "waypoint",
+            "source": "current_waypoint"
+        }
+    ]
+}

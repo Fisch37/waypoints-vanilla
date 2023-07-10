@@ -20,11 +20,13 @@ execute store result storage fisch37:waypoints current_waypoint.Pos[2] int 1 run
 # Store dimension
 execute at @s if dimension minecraft:the_nether run data modify storage fisch37:waypoints current_waypoint.dimension set value {index:-1, name:"The Nether"}
 execute at @s if dimension minecraft:the_end run data modify storage fisch37:waypoints current_waypoint.dimension set value {index:1, name:"The End"}
-# Copying data into waypoint array
+# Update global waypoint data
 data modify storage fisch37:waypoints waypoints append from storage fisch37:waypoints current_waypoint
-# Remove temporary data
-data remove storage fisch37:waypoints current_waypoint
-# Update waypoint count
 scoreboard players add wps_count f37_waypoints_RAM 1
 
-function fisch37:waypoints/reset_waypoint_book
+# Replace waypoint book
+item replace entity @s weapon.mainhand with written_book{IsWaypoint:1b,display:{Name:'{"text":"Waypoint","color":"aqua","italic":false}',Lore:['{"text":"A book detailing a specific waypoint."}','{"text":"Add it to your collection by combining it with a teleport book"}','{"text":"or duplicate it and share the waypoint with others."}']},title:"Title!",author:"",pages:['[{"text":""},{"nbt":"SelectedItem.tag.waypoint.name","entity":"@s","color":"gold","bold":true,"underlined":true},{"text":"\\nCreated By: ","color":"black"},{"nbt":"SelectedItem.tag.waypoint.author","entity":"@s","color":"gray","italic":true},{"text":"\\nPos: ","color":"dark_aqua"},{"nbt":"SelectedItem.tag.waypoint.dimension.name","entity":"@s","color":"dark_aqua","italic":true},{"text":"/","color":"dark_aqua"},{"nbt":"SelectedItem.tag.waypoint.Pos","entity":"@s","color":"dark_aqua","italic":true},{"text":"\\nCost: ","color":"dark_green"},{"nbt":"SelectedItem.tag.waypoint.cost","entity":"@s","color":"dark_green","italic":true},{"text":"\\nDescription: "},{"nbt":"SelectedItem.tag.waypoint.description","entity":"@s","italic":true}]']} 1
+item modify entity @s weapon.mainhand fisch37:waypoints/set_waypoint_info_book
+
+# Remove temporary data
+data remove storage fisch37:waypoints current_waypoint
