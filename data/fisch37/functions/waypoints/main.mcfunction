@@ -15,3 +15,5 @@ execute as @a[scores={goto_waypoint_rel=1..}] unless predicate fisch37:waypoints
 scoreboard players reset @a[scores={goto_waypoint_rel=1..}] goto_waypoint_rel
 
 execute as @e[type=item,predicate=fisch37:waypoints/can_rel_add_pages] at @s if entity @e[type=item,nbt={Item:{tag:{IsWaypoint:1b}}},distance=..1] run function fisch37:waypoints/add_waypoint_to_book
+
+execute as @e[type=item,nbt={Item:{id:"minecraft:writable_book"}}] at @s run function fisch37:waypoints/book_modifiers/may_make_rel_book

@@ -1,0 +1,7 @@
+{
+    "condition": "location_check",
+    "offsetY": -1,
+    "predicate": {
+        "block": {"blocks": ["minecraft:crafting_table"]}
+    }
+}
