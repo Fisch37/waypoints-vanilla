@@ -6,8 +6,10 @@
 ##
 execute as @a if predicate fisch37:waypoints/holds_set_waypoint_book run function fisch37:waypoints/waypoint_from_book
 
-scoreboard players enable @a goto_waypoint
+scoreboard players enable @a[predicate=fisch37:waypoints/may_teleport_anywhere] goto_waypoint
 execute as @a[scores={goto_waypoint=1..}] run function fisch37:waypoints/init_teleport_ui
+# Neccessary for players switching from a book
+scoreboard players reset @a[predicate=!fisch37:waypoints/may_teleport_anywhere] goto_waypoint
 
 scoreboard players enable @a goto_waypoint_rel
 execute as @a[scores={goto_waypoint_rel=1..}] if predicate fisch37:waypoints/holds_rel_book run function fisch37:waypoints/init_rel_tp

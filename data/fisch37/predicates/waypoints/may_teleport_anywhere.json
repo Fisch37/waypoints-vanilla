@@ -1,0 +1,24 @@
+{
+    "condition": "any_of",
+    "terms": [
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "nbt": "{SelectedItem:{tag:{AllWaypoints:1b}}}"
+            }
+        },
+        {
+            "condition": "value_check",
+            "range": 1,
+            "value": {
+                "type": "score",
+                "target": {
+                    "type": "fixed",
+                    "name": "free_teleport"
+                },
+                "score": "f37_waypoints_RAM"
+            }
+        }
+    ]
+}
