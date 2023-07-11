@@ -10,11 +10,8 @@
             }
         },
         {
-            "condition": "location_check",
-            "offsetY": -1,
-            "predicate": {
-                "block": {"blocks": ["minecraft:cartography_table"]}
-            }
+            "condition": "reference",
+            "name": "fisch37:waypoints/is_on_cartography"
         }
     ]
 }
