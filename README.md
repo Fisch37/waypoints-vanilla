@@ -66,6 +66,7 @@ versions.
 + Configuring waypoint cost as an admin
 + Advancements for attaining certain items or completing certain
 actions.
++ Loadstone-connected waypoints
 + Variable level cost depending on distance? (May be added in the
 future, but probably after all the other points.)
 
