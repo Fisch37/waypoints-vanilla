@@ -36,7 +36,7 @@ You can craft a teleport book using a Book and Quill and 8 Echo Shards. You will
 
 It should be noted that this book will not contain any waypoint by
 default, you will have to add them yourself with the books you get
-from adding waypoints.
+from creating waypoints.
 
 ### How do you put waypoints into a teleport book?
 This step is quite simple. Adding a waypoint to a teleport book is
