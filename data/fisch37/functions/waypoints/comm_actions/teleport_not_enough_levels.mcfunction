@@ -5,4 +5,4 @@
  # Created by Fisch37.
 ##
 tellraw @s [{"text":"[Waypoints] ","color":"aqua","bold":true},{"text":"You do not have enough levels!","color":"red","bold":false}]
-playsound minecraft:entity.ender_eye.death player @s
+execute at @s run playsound minecraft:entity.ender_eye.death player @s
