@@ -7,7 +7,7 @@
 ##
 execute unless predicate fisch37:waypoints/is_on_crafting run return -1
 execute unless entity @e[type=item,distance=..1,nbt={Item:{id:"minecraft:ender_pearl",Count:1b}}] run return -2
-data modify entity @s Item merge value {tag:{display:{Name:'{"text":"Waypoint Creator","color":"aqua","italic":false}'},IsWaypointBook:1b,Enchantments:[{}],pages:["Sign this book to create a new waypoint, with the book title as the waypoint name."]}}
+data modify entity @s Item merge value {tag:{display:{Name:'{"text":"Waypoint Creator","color":"aqua","italic":false}'},IsWaypointBook:1b,Enchantments:[{}],pages:["Sign this book to create a new waypoint, with the book title as the waypoint name. Optionally: Write a description on Page 2"]}}
 
 kill @e[type=item,distance=..1,limit=1,sort=nearest,nbt={Item:{id:"minecraft:ender_pearl",Count:1b}}]
 execute run playsound minecraft:block.enchantment_table.use player @a
