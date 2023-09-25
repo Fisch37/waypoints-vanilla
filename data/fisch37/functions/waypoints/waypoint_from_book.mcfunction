@@ -6,10 +6,11 @@
 ##
 # Setting up a temporary storage location to create the waypoint into
 # Redoing this every time to ensure everything is set correctly
-data merge storage fisch37:waypoints {current_waypoint:{name:"",author:"",Pos:[0,0,0],cost:0,dimension:{index:0,name:"Overworld"}}}
+data merge storage fisch37:waypoints {current_waypoint:{name:"",author:"",description:"",Pos:[0,0,0],cost:0,dimension:{index:0,name:"Overworld"}}}
 # Storing data
 data modify storage fisch37:waypoints current_waypoint.name set string entity @s SelectedItem.tag.title
 data modify storage fisch37:waypoints current_waypoint.author set string entity @s SelectedItem.tag.author
+data modify storage fisch37:waypoints current_waypoint.description set string entity @s SelectedItem.tag.pages[1]
 # Storing position (y rounded half away from zero)
 # (fixes falling through paths etc.)
 execute store result storage fisch37:waypoints current_waypoint.Pos[0] int 1 run data get entity @s Pos[0] 1
@@ -25,7 +26,7 @@ data modify storage fisch37:waypoints waypoints append from storage fisch37:wayp
 scoreboard players add wps_count f37_waypoints_RAM 1
 
 # Replace waypoint book
-item replace entity @s weapon.mainhand with written_book{IsWaypoint:1b,display:{Name:'{"text":"Waypoint","color":"aqua","italic":false}',Lore:['{"text":"A book detailing a specific waypoint."}','{"text":"Add it to your collection by combining it with a teleport book"}','{"text":"or duplicate it and share the waypoint with others."}']},title:"Title!",author:"",pages:['[{"text":""},{"nbt":"SelectedItem.tag.waypoint.name","entity":"@s","color":"gold","bold":true,"underlined":true},{"text":"\\nCreated By: ","color":"black"},{"nbt":"SelectedItem.tag.waypoint.author","entity":"@s","color":"gray","italic":true},{"text":"\\nPos: ","color":"dark_aqua"},{"nbt":"SelectedItem.tag.waypoint.dimension.name","entity":"@s","color":"dark_aqua","italic":true},{"text":"/","color":"dark_aqua"},{"nbt":"SelectedItem.tag.waypoint.Pos","entity":"@s","color":"dark_aqua","italic":true},{"text":"\\nCost: ","color":"dark_green"},{"nbt":"SelectedItem.tag.waypoint.cost","entity":"@s","color":"dark_green","italic":true},{"text":"\\nDescription: "},{"nbt":"SelectedItem.tag.waypoint.description","entity":"@s","italic":true}]']} 1
+item replace entity @s weapon.mainhand with written_book{IsWaypoint:1b,display:{Name:'{"text":"Waypoint","color":"aqua","italic":false}',Lore:['{"text":"A book detailing a specific waypoint."}','{"text":"Add it to your collection by combining it with a teleport book"}','{"text":"or duplicate it and share the waypoint with others."}']},title:"Title!",author:"",pages:['[{"text":""},{"nbt":"SelectedItem.tag.waypoint.name","entity":"@s","color":"gold","bold":true,"underlined":true},{"text":"\\nCreated By: ","color":"black"},{"nbt":"SelectedItem.tag.waypoint.author","entity":"@s","color":"gray","italic":true},{"text":"\\nPos: ","color":"dark_aqua"},{"nbt":"SelectedItem.tag.waypoint.dimension.name","entity":"@s","color":"dark_aqua","italic":true},{"text":"/","color":"dark_aqua"},{"nbt":"SelectedItem.tag.waypoint.Pos","entity":"@s","color":"dark_aqua","italic":true},{"text":"\\nCost: ","color":"dark_green"},{"nbt":"SelectedItem.tag.waypoint.cost","entity":"@s","color":"dark_green","italic":true},{"text":"\\nDescription: "},{"nbt":"SelectedItem.tag.waypoint.description","entity":"@s","italic":true,"interpret": true}]']} 1
 item modify entity @s weapon.mainhand fisch37:waypoints/set_waypoint_info_book
 
 # Remove temporary data
