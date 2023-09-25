@@ -11,6 +11,7 @@ data merge storage fisch37:waypoints {current_waypoint:{name:"",author:"",descri
 data modify storage fisch37:waypoints current_waypoint.name set string entity @s SelectedItem.tag.title
 data modify storage fisch37:waypoints current_waypoint.author set string entity @s SelectedItem.tag.author
 data modify storage fisch37:waypoints current_waypoint.description set string entity @s SelectedItem.tag.pages[1]
+execute store result storage fisch37:waypoints current_waypoint.cost int 1 run scoreboard players get wps_default_cost f37_waypoints_RAM
 # Storing position (y rounded half away from zero)
 # (fixes falling through paths etc.)
 execute store result storage fisch37:waypoints current_waypoint.Pos[0] int 1 run data get entity @s Pos[0] 1
