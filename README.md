@@ -62,8 +62,8 @@ More features will be added in the future.
 This roadmap shows the features I intend to include in later
 versions.
 
-+ Adding waypoint descriptions
-+ Configuring waypoint cost as an admin
++ ~~Adding waypoint descriptions~~
++ ~~Configuring waypoint cost as an admin~~
 + Advancements for attaining certain items or completing certain
 actions.
 + Loadstone-connected waypoints
