@@ -9,8 +9,7 @@ execute if score data_version f37_waypoints_RAM > _new_data_version f37_waypoint
 execute if score data_version f37_waypoints_RAM >= _new_data_version f37_waypoints_RAM run return 1
 
 
-execute unless data storage fisch37:waypoints/books all_waypoints run function fisch37:waypoints/book_modifiers/store_all_wps_nbt
-execute unless data storage fisch37:waypoints/books rel_waypoints run function fisch37:waypoints/book_modifiers/store_rel_wps_nbt
+function #fisch37:waypoints/book_modifiers
 scoreboard players operation data_version f37_waypoints_RAM = _new_data_version f37_waypoints_RAM
 
 scoreboard players reset _new_data_version f37_waypoints_RAM
