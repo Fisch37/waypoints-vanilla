@@ -12,7 +12,7 @@ function fisch37:waypoints/get_waypoint
 execute store result score has_sufficient_levels f37_waypoints_RAM run function fisch37:waypoints/check_levels
 
 execute if score has_sufficient_levels f37_waypoints_RAM matches 0 run function fisch37:waypoints/comm_actions/teleport_not_enough_levels
-execute if score has_sufficient_levels f37_waypoints_RAM matches 1 run function fisch37:waypoints/teleport_action
+execute if score has_sufficient_levels f37_waypoints_RAM matches 1 run function fisch37:waypoints/teleport_action_logic
 # Cleanup
 scoreboard players reset @s goto_waypoint
 data remove storage fisch37:waypoints target_waypoint
