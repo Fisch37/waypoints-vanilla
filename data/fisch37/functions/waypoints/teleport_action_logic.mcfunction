@@ -6,7 +6,7 @@
  # 
  # Created by Fisch37.
 ##
-execute unless entity @s[gamemode=creative] run function fisch37:waypoints/_iter_reduce_levels
+execute unless entity @s[gamemode=creative] run function fisch37:waypoints/reduce_levels
 
 function fisch37:waypoints/teleport_action
 
