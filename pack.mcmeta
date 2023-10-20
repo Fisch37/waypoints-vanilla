@@ -1,6 +1,15 @@
 {
 	"pack": {
 		"pack_format": 15,
-		"description": "Waypoints in Vanilla!"
+		"description": "Waypoints in Vanilla!",
+		"supported_formats": [15,18]
+	},
+	"overlays": {
+		"entries": [
+			{
+				"directory": "overlay_function_macros",
+				"formats": [18,21]
+			}
+		]
 	}
 }
