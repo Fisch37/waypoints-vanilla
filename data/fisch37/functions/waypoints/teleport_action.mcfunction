@@ -20,3 +20,7 @@ execute if score dimension_index f37_waypoints_RAM matches 1 in minecraft:the_en
 execute at @s run playsound entity.enderman.teleport player @s
 execute at @s run particle minecraft:portal ~ ~1 ~ 0 0 0 1 100 force
 tellraw @s [{"text":"[Waypoints] ","color":"aqua","bold":true},{"text":"Welcome to ","color":"white","bold":false},{"nbt":"target_waypoint.name","storage":"fisch37:waypoints","color":"gray","italic":true,"bold":false}]
+
+# Cleanup
+# (f37_tp_pos is completely reset by waypoints/warp/call)
+scoreboard players reset dimension_index f37_waypoints_RAM
