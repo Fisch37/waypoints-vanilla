@@ -70,6 +70,7 @@ actions.
 + Variable level cost depending on distance? (May be added in the
 future, but probably after all the other points.)
 + Better configuration using a chat-based ui
++ Visually show waypoints by means of particles or similar
 
 
 # Public Servers / Series
