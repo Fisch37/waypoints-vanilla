@@ -1,5 +1,4 @@
-# x* = x*10
-# x*-floor(x)*10 >= 5 ? top(x)*10 : floor(x)*10
+# (x*10)-floor(x)*10 >= 5 ? top(x)*10 : floor(x)*10
 
 scoreboard players set TEN f37_waypoints_RAM 10
 
