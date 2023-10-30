@@ -1,9 +1,9 @@
 ##
- # teleport_with_level_check.mcfunction
+ # with_level_check.mcfunction
  #
  # Runs as soon as the relevant waypoints have been copied to 
  # iter_waypoints
- # (continuing from init_teleport_ui and init_rel_tp).
+ # (continuing from init_absolute and init_relative).
  #
  # Checks if a player has enough levels to teleport and completes the
  # teleport or sends an error. Also cleans up after the two calling
@@ -15,7 +15,7 @@ function fisch37:waypoints/get_waypoint
 execute store result score has_sufficient_levels f37_waypoints_RAM run function fisch37:waypoints/check_levels
 
 execute if score has_sufficient_levels f37_waypoints_RAM matches 0 run function fisch37:waypoints/comm_actions/teleport_not_enough_levels
-execute if score has_sufficient_levels f37_waypoints_RAM matches 1 run function fisch37:waypoints/teleport_action_logic
+execute if score has_sufficient_levels f37_waypoints_RAM matches 1 run function fisch37:waypoints/teleport_to_waypoint/perform_teleport
 
 # Cleanup
 scoreboard players reset @s goto_waypoint

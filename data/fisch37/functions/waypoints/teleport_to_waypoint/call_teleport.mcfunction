@@ -1,5 +1,5 @@
 ##
- # teleport_action.mcfunction
+ # call_teleport.mcfunction
  # Actually calls the teleport
  # 
  # Created by Fisch37. 
@@ -11,6 +11,7 @@ execute store result score z f37_tp_pos run data get storage fisch37:waypoints t
 scoreboard players reset dimension_index f37_waypoints_RAM
 execute store result score dimension_index f37_waypoints_RAM run data get storage fisch37:waypoints target_waypoint.dimension.index
 # Run depending on the dimension. This is what makes this datapack incompatible with custom dimensions. Yay
+# NOTE: 1.20.2 overlays fix this issue
 execute if score dimension_index f37_waypoints_RAM matches -1 in minecraft:the_nether run function fisch37:waypoints/warp/call
 execute if score dimension_index f37_waypoints_RAM matches 0 in minecraft:overworld run function fisch37:waypoints/warp/call
 execute if score dimension_index f37_waypoints_RAM matches 1 in minecraft:the_end run function fisch37:waypoints/warp/call

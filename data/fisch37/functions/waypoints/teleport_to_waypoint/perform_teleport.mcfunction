@@ -1,5 +1,5 @@
 ##
- # teleport_action_logic.mcfunction
+ # perform_teleport.mcfunction
  # Does some fancy logic around the actual teleport.
  # Reduces the amount of levels, calls teleport_action, sound, 
  # particles, a chat message.
@@ -8,7 +8,7 @@
 ##
 execute unless entity @s[gamemode=creative] run function fisch37:waypoints/reduce_levels
 
-function fisch37:waypoints/teleport_action
+function fisch37:waypoints/teleport_to_waypoint/call_teleport
 
 # NOTE: Sound and particles can be unreliable at great distances.
 #       This might be fixed incidentally when implementing function macros.
