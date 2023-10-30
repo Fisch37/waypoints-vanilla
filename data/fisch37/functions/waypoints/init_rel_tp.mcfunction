@@ -1,7 +1,7 @@
 ##
  # init_rel_tp.mcfunction
  # Sets up and checks a teleport for validity when executed with goto_waypoint_rel.
- # Also executes teleport_action_logic
+ # Also executes teleport_with_level_check
  # Created by Fisch37.
 ##
 
