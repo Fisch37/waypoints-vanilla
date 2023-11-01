@@ -2,7 +2,7 @@
 	"pack": {
 		"pack_format": 15,
 		"description": "Waypoints in Vanilla!",
-		"supported_formats": [15,18]
+		"supported_formats": [15,21]
 	},
 	"overlays": {
 		"entries": [
