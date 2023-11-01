@@ -18,6 +18,6 @@ scoreboard players operation round_in f37_waypoints_RAM *= round_sign f37_waypoi
 # (the logic is exactly the same once round_in is defined to be >=0)
 function fisch37:waypoints/rounding/half_away_from_zero
 # Correct sign
-scoreboard players operation round_in f37_waypoints_RAM *= round_sign f37_waypoints_RAM
+scoreboard players operation round_out f37_waypoints_RAM *= round_sign f37_waypoints_RAM
 # Cleanup
 scoreboard players reset round_sign f37_waypoints_RAM
