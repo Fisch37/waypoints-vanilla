@@ -10,5 +10,5 @@ execute if entity @s[gamemode=creative] run return 1
 execute store result score player_levels f37_waypoints_RAM run xp query @s levels
 execute store result score wps_cost f37_waypoints_RAM run data get storage fisch37:waypoints target_waypoint.cost
 execute if score player_levels f37_waypoints_RAM >= wps_cost f37_waypoints_RAM run return 1
-# Technically not required, but inconsistencies suck
+# (Required as of 1.20.3)
 return 0
