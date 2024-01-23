@@ -1,0 +1,14 @@
+{
+    "function": "copy_nbt",
+    "source": {
+        "type": "storage",
+        "source": "fisch37:json"
+    },
+    "ops": [
+        {
+            "op": "append",
+            "target": "pages",
+            "source": "resolved"
+        }
+    ]
+}
