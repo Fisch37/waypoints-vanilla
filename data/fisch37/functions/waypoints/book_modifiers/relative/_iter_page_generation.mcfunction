@@ -5,7 +5,7 @@
 
 execute if score wps_count f37_waypoints_RAM matches ..0 run return 0
 # Failsafe for wps_count > 128 (or other value if implementation changed)
-execute unless data storage fisch37:json templates[0] run return fail
+execute unless data storage fisch37:json templates[0] run return 1
 
 data modify storage fisch37:json raw set from storage fisch37:json templates[0]
 function fisch37:waypoints/resolve_json_text/resolve
