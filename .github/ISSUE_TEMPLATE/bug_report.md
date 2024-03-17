@@ -23,7 +23,8 @@ Steps to reproduce the behavior:
 4. See error
 
 # Used Version
-The version of the pack you are using. Also note if you are using the mod version or the datapack.
+The version of the pack and the game.
+Also note if you are using the mod version or the datapack.
 
 # Additional Specifications
 Are you using Vanilla, Fabric, Forge or Quilt? What additional mods are you using?
