@@ -30,7 +30,8 @@ Getting a teleport to a waypoint is a little more difficult. In
 fact, it's almost impossible if you don't have a teleport book.
 
 ### How do you get a teleport book?
-You can craft a teleport book using a Book and Quill and 8 Echo Shards. You will need to throw them on a Crafting Table like with the Waypoint Creator.
+You can craft a teleport book using a Book and Quill and 8 Echo Shards.
+You will need to throw them on a Crafting Table like with the Waypoint Creator.
 
 ![A Book and Quill and eight Echo Shards make a teleport book](images/crafting_teleport.png)
 
