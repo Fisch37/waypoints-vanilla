@@ -1,3 +1,4 @@
 raw_snbt*.txt
 .vscode/
 .idea/
+*.code-workspace
