@@ -18,4 +18,4 @@ return 1
 # will allow this function to run without raising a macro parsing error.
 # https://discord.com/channels/154777837382008833/1269359091525091358/1269364958668525680
 # for his explanation
-$clone from $(dimension) 0 -10000 0 -10000 0 -10000 0
+$clone from $(dimension) 0 -10000 0 -10000 0 -10000 0 0 0
