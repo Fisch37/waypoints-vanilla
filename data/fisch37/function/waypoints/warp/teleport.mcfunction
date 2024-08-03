@@ -10,4 +10,5 @@
 # corrupt the dimension data. Further investigation may be needed.
 # NOTE: This function is an XSS-vulnerability IF there is a bug allowing arbitrary modification of book/storage nbt
 # Consider: dimension:"minecraft:overworld if function [...]" for 1.21+
+# FIXME: This **is** an XSS vulnerability! consider creative hotbars allowing users to import waypoint books
 $execute in $(dimension) run tp @s $(x) $(y) $(z)

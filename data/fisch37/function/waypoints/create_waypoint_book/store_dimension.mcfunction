@@ -2,7 +2,6 @@
  # store_dimension.mcfunction
  #
  # Stores the dimension of the waypoint.
- # This overlay implements support for custom dimensions using the dimension.id field.
  #
  # Created by Fisch37.
 ##
