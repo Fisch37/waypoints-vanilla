@@ -9,6 +9,10 @@
 			{
 				"directory": "overlay_function_macros",
 				"formats": [18,26]
+			},
+			{
+				"directory": "overlay_components",
+				"formats": 41
 			}
 		]
 	}
