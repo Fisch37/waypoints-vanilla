@@ -1,0 +1,17 @@
+{
+    "condition": "all_of",
+    "terms": [
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "type": "minecraft:item",
+                "nbt": "{Item:{components:{'minecraft:custom_data':{RelativeWaypoints:1b}}}}"
+            }
+        },
+        {
+            "condition": "reference",
+            "name": "fisch37:waypoints/is_on_cartography"
+        }
+    ]
+}

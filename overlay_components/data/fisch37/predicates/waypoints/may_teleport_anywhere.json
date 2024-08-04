@@ -1,0 +1,32 @@
+{
+    "condition": "any_of",
+    "terms": [
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "equipment": {
+                    "mainhand": {
+                        "predicates": {
+                            "minecraft:custom_data": {
+                                "AllWaypoints": true
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "value_check",
+            "range": 1,
+            "value": {
+                "type": "score",
+                "target": {
+                    "type": "fixed",
+                    "name": "free_teleport"
+                },
+                "score": "f37_waypoints_RAM"
+            }
+        }
+    ]
+}
