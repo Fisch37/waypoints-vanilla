@@ -1,0 +1,20 @@
+{
+    "display": {
+        "title": "waypoints",
+        "description": "Waypoints in Vanilla!",
+        "icon": {
+            "id": "minecraft:player_head",
+            "components": {
+                "minecraft:profile":"Fisch37"
+            }
+        },
+        "show_toast": false,
+        "announce_to_chat": false
+    },
+    "parent": "global:root",
+    "criteria": {
+        "trigger": {
+            "trigger": "minecraft:tick"
+        }
+    }
+}
