@@ -4,7 +4,7 @@
     "predicate": {
         "equipment": {
             "mainhand": {
-                "items": "minecraft:writable_book",
+                "items": "minecraft:written_book",
                 "predicates": {
                     "minecraft:custom_data": {
                         "IsWaypointBook": true
