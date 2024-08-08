@@ -9,3 +9,6 @@ scoreboard objectives add f37_waypoints_RAM dummy
 scoreboard objectives add goto_waypoint trigger
 scoreboard objectives add goto_waypoint_rel trigger
 scoreboard objectives add f37_tp_pos dummy
+# Using this linebreak as an NBT lookup with interpret: true works! 
+# We need this since \n is not a valid escape sequence in SNBT
+data merge storage fisch37:utils {linebreak:'{"text":"\\n"}'}

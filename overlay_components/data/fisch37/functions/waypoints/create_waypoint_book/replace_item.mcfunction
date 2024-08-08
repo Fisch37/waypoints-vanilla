@@ -5,23 +5,6 @@
  #
  # Created by Fisch37.
 ##
-# FIXME: This raises a huge java exception. Works anyway though! WTF
-data modify storage fisch37:json raw set value '[\
-    {"text":""},\
-    {"nbt":"current_waypoint.name","storage":"fisch37:waypoints","color":"gold","bold":true,"underlined":true},\
-    {"text":"\\nCreated By: ","color":"black"},\
-    {"nbt":"current_waypoint.author","storage":"fisch37:waypoints","color":"gray","italic":true},\
-    {"text":"\\nPos: ","color":"dark_aqua"},\
-    {"nbt":"current_waypoint.dimension.name","storage":"fisch37:waypoints","color":"dark_aqua","italic":true},\
-    {"text":"/","color":"dark_aqua"},\
-    {"nbt":"current_waypoint.Pos","storage":"fisch37:waypoints","color":"dark_aqua","italic":true},\
-    {"text":"\\nCost: ","color":"dark_green"},\
-    {"nbt":"current_waypoint.cost","storage":"fisch37:waypoints","color":"dark_green","italic":true},\
-    {"text":"\\nDescription: "},\
-    {"nbt":"current_waypoint.description","storage":"fisch37:waypoints","italic":true,"interpret": true}\
-]'
-function fisch37:waypoints/resolve_json_text/resolve
-
 item replace entity @s weapon.mainhand with written_book[\
     custom_data={IsWaypoint:1b},\
     item_name='"Waypoint"',\
@@ -37,5 +20,8 @@ item replace entity @s weapon.mainhand with written_book[\
 data modify storage fisch37:macro macro_arguments set value {}
 data modify storage fisch37:macro macro_arguments.page set from storage fisch37:json resolved
 data modify storage fisch37:macro macro_arguments merge from storage fisch37:waypoints current_waypoint
+data modify storage fisch37:macro macro_arguments.dimension_name set from storage fisch37:waypoints current_waypoint.dimension.name
+data modify storage fisch37:macro macro_arguments.name set string storage fisch37:macro macro_arguments.name.raw
+data modify storage fisch37:macro macro_arguments.description set from storage fisch37:macro macro_arguments.description.raw
 
 function fisch37:waypoints/create_waypoint_book/_macro_set_dynamic_properties with storage fisch37:macro macro_arguments
