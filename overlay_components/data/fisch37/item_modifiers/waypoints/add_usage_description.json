@@ -1,0 +1,10 @@
+{
+    "function": "set_lore",
+    "mode": "append",
+    "lore": [
+        {"text": ""},
+        {"text":"A book detailing a specific waypoint."},
+        {"text":"Add it to your collection by combining it with a teleport book"},
+        {"text":"or duplicate it and share the waypoint with others."}
+    ]
+}

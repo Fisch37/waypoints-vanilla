@@ -1,1 +1,14 @@
-[]
+{
+    "function": "copy_custom_data",
+    "source": {
+        "type": "minecraft:storage",
+        "source": "fisch37:waypoints"
+    },
+    "ops": [
+        {
+            "op": "replace",
+            "source": "current_waypoint",
+            "target": "waypoint"
+        }
+    ]
+}

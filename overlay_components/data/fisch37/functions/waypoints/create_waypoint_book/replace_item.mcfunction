@@ -25,3 +25,5 @@ data modify storage fisch37:macro macro_arguments.name set string storage fisch3
 data modify storage fisch37:macro macro_arguments.description set from storage fisch37:macro macro_arguments.description.raw
 
 function fisch37:waypoints/create_waypoint_book/_macro_set_dynamic_properties with storage fisch37:macro macro_arguments
+item modify entity @s weapon.mainhand fisch37:waypoints/add_usage_description
+item modify entity @s weapon.mainhand fisch37:waypoints/set_waypoint_info_book
